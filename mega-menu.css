@@ -1,0 +1,41 @@
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 97vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top:30px
+    
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+
+  .main-menu{
+    float: left;
+  }
+    .nav-link:hover {
+    border-bottom: 3px solid red !important;
+  }
+  
+  .nav-link.active {
+    border-bottom: 3px solid red !important;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .mega-menu-body{
+
+    padding: 20px;
+  }
