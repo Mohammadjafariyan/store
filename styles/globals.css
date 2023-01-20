@@ -29,12 +29,20 @@
   font-weight: bold;
 }
 
-.nav-link.text-muted{
+.font-mitra{
+  font-family: BMitra_0;
+  font-weight: normal !important;
+
+}
+
+.nav-link.text-muted {
   font-family: BMitra_0;
   font-weight: normal !important;
   font-size: 18px !important;
 
 }
+
+
 
 
 /* :root {

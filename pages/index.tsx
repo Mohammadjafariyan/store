@@ -8,6 +8,10 @@ import HeaderSearch from "@/components/complex/header-search";
 import HeaderLoginRegisterButton from "@/components/basic/header-login-register-button";
 import { HeaderBasket } from "@/components/basic/header-basket";
 import { MegaMeno } from "@/components/basic/mega-menu";
+import { GalleriaIndicatorDemo } from "@/components/complex/gallery";
+import { SelectCityModal } from "@/components/complex/select-city-modal";
+import { InfoBadges } from "@/components/complex/info-badges";
+import OrderPanel from "@/components/complex/order-panel";
 
 
 export default function Home() {
@@ -79,7 +83,7 @@ export default function Home() {
 
           <nav className="navbar navbar-expand-lg bg-body-tertiary link-bottom-dec ">
             <div className="container-fluid ">
-              
+
               <div className="me-5 pe-5" >
 
                 <MegaMeno />
@@ -99,11 +103,11 @@ export default function Home() {
 
 
               </div>
-              
+
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
+              <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <a className="nav-link text-muted "  >سوپرمارکت</a>
@@ -127,18 +131,31 @@ export default function Home() {
                     <a className="nav-link disabled">Disabled</a>
                   </li> */}
                 </ul>
-          
-          <ul>
-          <li className="collapse navbar-collapse">
-                    <a className="nav-link text-muted" >در دیجی کالا بفروشید</a>
+
+                <ul className="navbar-nav ms-5 ps-5">
+                  <li className="collapse navbar-collapse">
+                  <SelectCityModal />
                   </li>
-          </ul>
+                </ul>
               </div>
             </div>
           </nav>
 
 
 
+
+<GalleriaIndicatorDemo/>
+<br/>
+<InfoBadges/>
+<br/>
+
+<div className="container">
+
+<div className="d-flex justify-content-evenly ">
+
+<OrderPanel/>
+</div>
+</div>
         </div>
       </main>
     </>
