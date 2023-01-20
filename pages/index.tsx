@@ -60,7 +60,7 @@ export default function Home() {
                   </li>
                   <li className="nav-item">
                   </li>
-            <span className='text-muted' style={{fontSize: '28px !important' , color:'rgb(33 37 41 / 28%)!important'}}>| </span>
+                  <span className='text-muted' style={{ fontSize: '33px !important', color: 'rgb(33 37 41 / 28%)!important' }}>| </span>
                   <li className="nav-item">
                     <HeaderBasket />
 
@@ -77,14 +77,15 @@ export default function Home() {
 
 
 
-          <nav className="navbar navbar-expand-lg bg-body-tertiary link-bottom-dec">
-            <div className="container-fluid">
+          <nav className="navbar navbar-expand-lg bg-body-tertiary link-bottom-dec ">
+            <div className="container-fluid ">
+              
               <div className="me-5 pe-5" >
 
-<MegaMeno/>
+                <MegaMeno />
                 <div className="nav-item dropdown">
 
-                
+
                   <div className="dropdown-content">
                     <div className="card" >
                       <div className="card-body mega-menu-body">
@@ -98,24 +99,40 @@ export default function Home() {
 
 
               </div>
+              
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <a className="nav-link " aria-current="page" >سوپرمارکت</a>
+                    <a className="nav-link text-muted "  >سوپرمارکت</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" >Features</a>
+                    <a className="nav-link text-muted" >پرفروش ترین ها</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" >Pricing</a>
+                    <a className="nav-link text-muted" >تخفیف ها و پیشنهاد ما</a>
                   </li>
                   <li className="nav-item">
+                    <a className="nav-link text-muted" >شگفت انگیز ها </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link text-muted" >سوالی دارید ؟</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link text-muted" >در دیجی کالا بفروشید</a>
+                  </li>
+                  {/*  <li className="nav-item">
                     <a className="nav-link disabled">Disabled</a>
-                  </li>
+                  </li> */}
                 </ul>
+          
+          <ul>
+          <li className="collapse navbar-collapse">
+                    <a className="nav-link text-muted" >در دیجی کالا بفروشید</a>
+                  </li>
+          </ul>
               </div>
             </div>
           </nav>

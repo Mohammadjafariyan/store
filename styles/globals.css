@@ -5,6 +5,38 @@
 .non-border{
   border: none !important;
 }
+
+@font-face {
+  font-family: IranianSans;
+  src: url(/font/IranianSans.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: Yekan;
+  src: url(/font/Yekan.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: BMitra_0;
+  src: url(/font/BMitra_0.ttf) format('truetype');
+}
+
+
+*:not(.pi){
+  font-family: Yekan;
+  font-weight: bold;
+}
+
+.nav-link.text-muted{
+  font-family: BMitra_0;
+  font-weight: normal !important;
+  font-size: 18px !important;
+
+}
+
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
