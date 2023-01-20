@@ -18,11 +18,11 @@
   .main-menu{
     float: left;
   }
-    .nav-link:hover {
+    .link-bottom-dec .nav-link:hover {
     border-bottom: 3px solid red !important;
   }
   
-  .nav-link.active {
+  .link-bottom-dec  .nav-link.active {
     border-bottom: 3px solid red !important;
   }
 
