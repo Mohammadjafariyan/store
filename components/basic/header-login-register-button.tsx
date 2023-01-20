@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@mantine/core';
 
 
-const HeaderLoginRegisterButton = (props) => {
+const HeaderLoginRegisterButton = (props:any) => {
 
     return (
 

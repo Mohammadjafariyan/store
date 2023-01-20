@@ -7,7 +7,7 @@ import { SampleTable } from '@/utility/sample-table';
 
 export default function HeaderSearch() {
 
-    const op = useRef(null);
+    const op:any = useRef(null);
 
 
     return (
@@ -18,7 +18,14 @@ export default function HeaderSearch() {
 
                 <span className="p-input-icon-right me-3">
                     <i className="pi pi-search" />
-                    <InputText onClick={(e) => op.current.toggle(e)} placeholder="                جستجو " style={{ width: '30vw', backgroundColor: '#f1f2f4', border: 'none', borderRadius: '5px', height: '40px', fontSize: '15px' }} />
+                   
+                    <InputText onClick={(e) =>{
+if(op && op.current)
+{
+    op.current.toggle(e)
+}
+
+                    }} placeholder="                جستجو " style={{ width: '30vw', backgroundColor: '#f1f2f4', border: 'none', borderRadius: '5px', height: '40px', fontSize: '15px' }} />
 
 
              

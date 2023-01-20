@@ -23,7 +23,7 @@ export const InfoBadges = () => {
 
                 return (
                     
-                    <Avatar size='xl' color={item.color} radius="sm">
+                    <Avatar key={i} size='xl' color={item.color} radius="sm">
                         <i style={{ fontSize: '45px' }} className={item.icon} ></i>
                     </Avatar>
                )

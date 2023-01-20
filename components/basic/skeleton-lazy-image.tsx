@@ -2,12 +2,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { Skeleton } from 'primereact/skeleton';
 
-export default function SkeletonLazyImage(props) {
+export default function SkeletonLazyImage(props:any) {
 
    const [isImageReady, setIsImageReady] = useState(false);
 
 
-   const onLoadingComplete = (e) => {
+   const onLoadingComplete = () => {
       console.log('onLoadingComplete')
 
       setIsImageReady(true)

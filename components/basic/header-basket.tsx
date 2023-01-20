@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@mantine/core';
 
-export const HeaderBasket = (props) => {
+export const HeaderBasket = (props:any) => {
     return (
         <>
 

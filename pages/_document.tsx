@@ -18,14 +18,14 @@ export default class _Document extends Document {
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="description" content="Web site created using create-next-app" />
           <meta name="theme-color" content="#000000" />
-          <link
+{/*           <link
             rel="preload"
             href="/font/IranianSans.ttf"
             as="font"
             type="font/ttf"
             crossOrigin="anonymous"
           />
-
+ */}
           <title>Page title</title>
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
           <link rel="manifest" href="/manifest.json" />

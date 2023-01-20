@@ -2,10 +2,11 @@ import React, { useState, useEffect, } from 'react';
 import { Galleria } from 'primereact/galleria';
 import { PhotoService } from '@/service/header-photo-service';
 import { Skeleton } from 'primereact/skeleton';
+import Image from 'next/image';
 
 export const GalleriaIndicatorDemo = () => {
 
-    const [images, setImages] = useState(null);
+    const [images, setImages] = useState([]);
     const [images2, setImages2] = useState(null);
 
     const galleriaService = new PhotoService();
@@ -29,12 +30,12 @@ export const GalleriaIndicatorDemo = () => {
         galleriaService.getImages().then(data => {setImages(data); setImages2(data.slice(0, 5))})
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-    const itemTemplate = (item) => {
+    const itemTemplate = (item:any) => {
         if(!item || !item.itemImageSrc){
             return <Skeleton width="100%" height="400px"  />;
 
         }else{
-            return <img src={item.itemImageSrc} onError={(e) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
+            return <Image src={item.itemImageSrc} onError={(e:any) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
 
         }
     }

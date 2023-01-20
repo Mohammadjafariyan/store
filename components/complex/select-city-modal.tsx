@@ -4,20 +4,20 @@ import { Button } from 'primereact/button';
 import { SampleTable } from '@/utility/sample-table';
 
 
-export const SelectCityModal = (props) => {
+export const SelectCityModal = (props:any) => {
     const [visible, setVisible] = useState(false);
 
-    const dialogFuncMap = {
+    const dialogFuncMap:any = {
         'visible': setVisible,
     }
 
   
 
-    const onHide = (name) => {
+    const onHide = (name:any) => {
         dialogFuncMap[`${name}`](false);
     }
 
-    const renderFooter = (name) => {
+    const renderFooter = (name:any) => {
         return (
             <div>
                 <Button label="No" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-text" />
