@@ -2,8 +2,6 @@ import SkeletonLazyImage from "@/components/basic/skeleton-lazy-image";
 import Head from "next/head"
 import Image from "next/image"
 
-import headerImage from "../public/img/sample-header.gif";
-import logo from "../public/img/logo.svg";
 import HeaderSearch from "@/components/complex/header-search";
 import HeaderLoginRegisterButton from "@/components/basic/header-login-register-button";
 import { HeaderBasket } from "@/components/basic/header-basket";
@@ -12,6 +10,9 @@ import { GalleriaIndicatorDemo } from "@/components/complex/gallery";
 import { SelectCityModal } from "@/components/complex/select-city-modal";
 import { InfoBadges } from "@/components/complex/info-badges";
 import OrderPanel from "@/components/complex/order-panel";
+import MostViewed from "@/components/complex/most-viewed";
+import MostSelled from "@/components/complex/most-selled";
+import { FooterLinks } from "@/components/complex/footer";
 
 
 export default function Home() {
@@ -31,7 +32,7 @@ export default function Home() {
           <nav className=" " >
             <div className="">
               <a className="navbar-brand" >
-                <SkeletonLazyImage src={headerImage} width="100%" height="50px" className="sample-header" alt="header" />
+                <img src={'/img/sample-header.gif'} width='100%' height='50px' className="sample-header" alt="header" />
 
               </a>
             </div>
@@ -46,7 +47,7 @@ export default function Home() {
           <nav className="navbar navbar-expand-lg " >
             <div className="container-fluid ">
               <a className="navbar-brand  me-5 pe-5" >
-                <SkeletonLazyImage src={logo} width="5px" height="5px" alt="لوگو" />
+                <img src={'/img/logo.svg'} width={100} height={50} alt="لوگو" />
 
 
               </a>
@@ -156,7 +157,22 @@ export default function Home() {
               <OrderPanel />
             </div>
           </div>
+          <br />
+
+          <div className='container'>
+            <MostViewed />
+            </div>
+          <br />
+          <div className='container'>
+            <MostSelled />
+            </div>
+
+
+
         </div>
+        <br />
+
+        <FooterLinks />
       </main>
     </>
   )

@@ -1,0 +1,7 @@
+{
+    "data":[
+        {"itemImageSrc": "/demo/Sayt/4 Gold.png","thumbnailImageSrc": "/demo/Sayt/4 Gold.png","price": "150,321,100","title": "طلا"},
+        {"itemImageSrc": "/demo/Sayt/4 Silver.png","thumbnailImageSrc": "/demo/Sayt/4 Silver.png","price": "70,151,100","title": "نقره"},
+        {"itemImageSrc": "/demo/Sayt/4 Steal.png","thumbnailImageSrc": "/demo/Sayt/4 Steal.png","price": "1,52,160","title": "استیل"}
+    ]
+}

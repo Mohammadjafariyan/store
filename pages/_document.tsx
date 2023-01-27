@@ -29,7 +29,7 @@ export default class _Document extends Document {
           <title>Page title</title>
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/icon.png"></link>
+          <link rel="apple-touch-icon" href="/img/logo.svg"></link>
           <meta name="theme-color" content="#fff" />
         </Head>
         <body>

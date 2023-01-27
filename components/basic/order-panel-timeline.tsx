@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Stepper, Button, Group } from '@mantine/core';
+import { GlobalConstants } from '../abstract/global';
+import SelectOrderProductType from '../complex/select-order-product-type';
 
 
 export function OrderPanelTimeline() {
@@ -9,24 +11,22 @@ export function OrderPanelTimeline() {
   
     return (
       <>
-        <Stepper active={active} onStepClick={setActive} breakpoint="sm">
-          <Stepper.Step label="First step" description="Create an account">
-            Step 1 content: Create an account
+        <Stepper color={GlobalConstants.PRIMARY_CSS} active={active} onStepClick={setActive} breakpoint="sm">
+          <Stepper.Step label="انتخاب محصول" description="و افزودن به سبد">
+            
+            <SelectOrderProductType/>
           </Stepper.Step>
-          <Stepper.Step label="Second step" description="Verify email">
-            Step 2 content: Verify email
+          <Stepper.Step label="سفارش و شخصی سازی" description="سفارشی سازی محصول به دلخواه">
           </Stepper.Step>
-          <Stepper.Step label="Final step" description="Get full access">
-            Step 3 content: Get full access
+          <Stepper.Step label="ثبت سفارش ساخت" description="پر کردن اطلاعات فرم">
           </Stepper.Step>
           <Stepper.Completed>
-            Completed, click back button to get to previous step
           </Stepper.Completed>
         </Stepper>
   
-        <Group position="center" mt="xl">
-          <Button variant="default" onClick={prevStep}>Back</Button>
-          <Button onClick={nextStep}>Next step</Button>
+        <Group position="right" mt="xl">
+          <Button variant="default" onClick={prevStep}>بازگشت</Button>
+          <Button style={{backgroundColor:GlobalConstants.PRIMARY_CSS}}  onClick={nextStep}>مرحله بعدی</Button>
         </Group>
       </>
     );

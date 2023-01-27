@@ -1,3 +1,26 @@
+.SkeletonLazyImage-fill img{
+
+position: unset !important;
+}
+
+.border-less{
+  border: none !important;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.small-resp-image{
+  width: 10vw;
+  height: 10vw;
+}
+
+html,.foot{
+background-color: #f8f9fa;
+}
+
+
 .shopping-cart{
           font-size: 25px !important;
 }

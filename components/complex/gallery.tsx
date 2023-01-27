@@ -2,7 +2,7 @@ import React, { useState, useEffect, } from 'react';
 import { Galleria } from 'primereact/galleria';
 import { PhotoService } from '@/service/header-photo-service';
 import { Skeleton } from 'primereact/skeleton';
-import Image from 'next/image';
+import SkeletonLazyImage from '../basic/skeleton-lazy-image';
 
 export const GalleriaIndicatorDemo = () => {
 
@@ -35,8 +35,8 @@ export const GalleriaIndicatorDemo = () => {
             return <Skeleton width="100%" height="400px"  />;
 
         }else{
-            return <Image src={item.itemImageSrc} onError={(e:any) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
-
+            return <SkeletonLazyImage  fill src={item.itemImageSrc} onError={(e:any) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
+ 
         }
     }
 
