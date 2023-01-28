@@ -13,6 +13,7 @@ import OrderPanel from "@/components/complex/order-panel";
 import MostViewed from "@/components/complex/most-viewed";
 import MostSelled from "@/components/complex/most-selled";
 import { FooterLinks } from "@/components/complex/footer";
+import LoginRegisterModal from "@/components/complex/auth-utils/login-register-modal";
 
 
 export default function Home() {
@@ -61,7 +62,8 @@ export default function Home() {
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
                     {/* <a className="nav-link active" aria-current="page" >Home</a> */}
-                    <HeaderLoginRegisterButton />
+                    {/* <HeaderLoginRegisterButton /> */}
+                    <LoginRegisterModal/>
                   </li>
                   <li className="nav-item">
                   </li>
