@@ -33,19 +33,12 @@ export default function LoginRegisterModal() {
                     <div className=" d-flex flex-column align-items-center tab-content">
                 <img src={'/img/logo.svg'} width={100} height={50} alt="لوگو" />
                         <div className="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-                            <form>
+                            <div>
 
                                 {loginOrRegister === 1 && <Login />}
                                 {loginOrRegister === 2 && <Register />}
 
-                                <ul className="nav nav-pills nav-justified " id="ex1" role="tablist" style={{ padding: '0px' }}>
-
-                                    <li className="nav-item" role="presentation">
-                                        <button className={`nav-link active`} id="tab-register" data-mdb-toggle="pill"
-                                            role="tab"
-                                            aria-controls="pills-register" aria-selected="false">ورود</button>
-                                    </li>
-                                </ul>
+                                
                                 <br />
                                 <small className="text-caption color-700 mt-4">ورود شما به معنای پذیرش<a className="mx-1 d-inline-block color-secondary-700" href="/page/terms/">شرایط طلا کالا</a>و<a className="mx-1 d-inline-block color-secondary-700" href="/page/privacy/">قوانین حریم‌خصوصی</a>است</small>
 
@@ -74,11 +67,11 @@ export default function LoginRegisterModal() {
 
 
 
-
+                                
                                 {/*  <div className="text-center">
                                     <p>حساب کاربری ندارید ? <a href="#!" onClick={() => setLoginOrRegister(2)}>ثبت نام</a></p>
                                 </div> */}
-                            </form>
+                            </div>
                         </div>
 
                     </div>

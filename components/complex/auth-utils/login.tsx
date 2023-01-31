@@ -1,35 +1,60 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useFormik } from 'formik';
 import { InputText } from "primereact/inputtext";
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import { classNames } from 'primereact/utils';
+import LoginInsertEmailPhone from "./login-insert-email-phone";
+import LoginConfirmCode from "./login-confirm-code";
+import { RegexEmailUtil, RegexMobileUtil } from "@/utility/regex";
+import { GlobalConstants } from "@/components/abstract/global";
+
+enum LoginPanels{
+    LoginInsertEmailPhone,
+    LoginConfirmCode
+}
 
 export default function Login() {
     const toast: any = useRef(null);
+
+
+const [panel, setPanel] = useState(LoginPanels.LoginInsertEmailPhone);
 
     const show = () => {
         toast.current.show({ severity: 'success', summary: 'Form Submitted', detail: formik.values.value });
     };
 
+
     const formik: any = useFormik({
         initialValues: {
-            value: ''
+            phoneOrEmail: ''
         },
         validate: (data) => {
             let errors: any = {};
 
-            if (!data.value) {
-                errors.value = 'Name - Surname is required.';
+            if (!data.phoneOrEmail) {
+                errors.phoneOrEmail = 'لطفا ایمیل یا شماره تلفن خود را وارد نمایید';
+            }
+
+
+            if (!RegexEmailUtil(data.phoneOrEmail) && !RegexMobileUtil(data.phoneOrEmail)) {
+                errors.phoneOrEmail = 'شماره موبایل یا ایمیل اشتباه است';
             }
 
             return errors;
         },
         onSubmit: (data: any) => {
-            data && show();
-            formik.resetForm();
+           // data && show();
+           // formik.resetForm();
+setPanel(LoginPanels.LoginConfirmCode);
+           
         }
     });
+
+    const goBack =()=>{
+        setPanel(LoginPanels.LoginInsertEmailPhone);
+
+    }
 
     const isFormFieldInvalid = (name: any) => !!(formik.touched[name] && formik.errors[name]);
 
@@ -38,6 +63,7 @@ export default function Login() {
     };
 
     return (
+        <form  onSubmit={formik.handleSubmit} >
         <div className="" data-testid='login' style={{ padding: '2vw' }}>
 
           {/*   <p className="text-muted">
@@ -47,10 +73,14 @@ export default function Login() {
 
                 لطفا شماره موبایل یا ایمیل خود را وارد کنید
             </p> */}
-            <p  style={{fontWeight:'normal',color:'#ef4056'}} >
-                شماره تلفن یا ایمیل :
-            </p>
-            <InputText style={{width:'100%'}} />
+          
+
+{panel == LoginPanels.LoginInsertEmailPhone && <LoginInsertEmailPhone value={formik.values.phoneOrEmail} onChange={(e:any) => {
+                            formik.setFieldValue('phoneOrEmail', e.target.value);
+                        }}/>}
+{panel == LoginPanels.LoginConfirmCode && <LoginConfirmCode  goBack={goBack}  mobileOrEmail={formik.values.phoneOrEmail}/>}
+{getFormErrorMessage('phoneOrEmail')}
+          
             {/* <form onSubmit={formik.handleSubmit} className="flex flex-column gap-2">
             <Toast ref={toast} />
                     <InputText
@@ -65,6 +95,18 @@ export default function Login() {
                 {getFormErrorMessage('value')}
                 <Button type="submit" label="Submit" />
             </form> */}
+
+{panel != LoginPanels.LoginInsertEmailPhone &&  <a className="nav" style={{float:'left',color:GlobalConstants.SECENDARY_CSS}} type="button" onClick={goBack} > بازگشت</a>}
         </div>
+        <ul className="nav nav-pills nav-justified " id="ex1" role="tablist" style={{ padding: '0px' }}>
+
+
+        <li className="nav-item" role="presentation">
+            <button type="submit"  className={`nav-link active`} 
+               
+                >ورود</button>
+        </li>
+    </ul>
+ </form>
     )
 }
