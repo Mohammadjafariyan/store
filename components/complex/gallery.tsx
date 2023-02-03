@@ -35,7 +35,7 @@ export const GalleriaIndicatorDemo = () => {
             return <Skeleton width="100%" height="400px"  />;
 
         }else{
-            return <SkeletonLazyImage  fill src={item.itemImageSrc} onError={(e:any) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
+            return <SkeletonLazyImage  fill src={item.itemImageSrc} onError={(e:any) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.alt} style={{maxHeight:'400px', width: '100%', display: 'block' }} />;
  
         }
     }

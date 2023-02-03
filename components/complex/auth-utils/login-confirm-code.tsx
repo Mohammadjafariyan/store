@@ -5,6 +5,7 @@ import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import { classNames } from 'primereact/utils';
 import { RegexEmailUtil, RegexMobileUtil } from "@/utility/regex";
+import { InputMask } from 'primereact/inputmask';
 
 export interface LoginConfirmCodeProps {
     mobileOrEmail:string;
@@ -64,7 +65,8 @@ export default function LoginConfirmCode(props:LoginConfirmCodeProps) {
                 {props.mobileOrEmail && RegexEmailUtil(props.mobileOrEmail)  && <span style={{color:'black'}}>{props.mobileOrEmail}</span> }
                 <span>را وارد نمایید </span>
             </p>
-            <InputText style={{width:'100%'}} />
+            <InputMask mask="9 9 9 9" placeholder="_ _ _ _"  style={{width:'100%' , textAlign:'center' ,direction:'ltr'}} />
+            
 
 
          

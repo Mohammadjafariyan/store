@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { SampleTable } from '@/utility/sample-table';
+import Link from 'next/link';
 
 
 
@@ -32,8 +33,10 @@ if(op && op.current)
                 </span>
             </form>
             <OverlayPanel ref={op}>
+
+                <Link shallow={true} href={'/Search'}>go Search </Link>
 <SampleTable/> 
-                    </OverlayPanel>
+                    </OverlayPanel> 
         </>
     )
 }
