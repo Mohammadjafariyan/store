@@ -1,5 +1,11 @@
 
+.on-hover-red :hover{
+  color: #ef4056 !important;
+}
 
+.font-slim{
+  font-weight: lighter !important;
+}
 .SkeletonLazyImage-fill img{
 
 position: unset !important;

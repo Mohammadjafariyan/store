@@ -9,10 +9,11 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 //import 'primeflex/primeflex.css';
 import { useEffect } from 'react'
+import { wrapper } from '@/components/abstract/root-redux-store'
 
 
 
-export default function App({ Component, pageProps }: AppProps) {
+ function App({ Component, pageProps }: AppProps) {
 
   useEffect(()=>{
     import("@/styles/assets/bootstrap.js");
@@ -35,3 +36,6 @@ export default function App({ Component, pageProps }: AppProps) {
   );
   // return <Component {...pageProps} />
 }
+
+
+export default wrapper.withRedux(App);
