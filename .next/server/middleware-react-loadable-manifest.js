@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"_app.tsx -> @/styles/assets/bootstrap.js":{id:5041,files:["static/chunks/41.51dfc52587122176.js"]}};
