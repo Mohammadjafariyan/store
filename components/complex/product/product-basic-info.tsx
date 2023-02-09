@@ -28,7 +28,7 @@ export default function ProductBasicInfo() {
 
         </div>
         <div className='col-md-11'>
-        <i  className='pi pi-info-circle'></i>  <small className='text-muted' style={{color:'#333'}}>درخواست مرجوع کردن کالا در گروه لوازم جانبی صوتی و تصویری خودرو با دلیل "انصراف از خرید" تنها در صورتی قابل تایید است که کالا در شرایط اولیه باشد (در صورت پلمپ بودن، کالا نباید باز شده باشد).
+        <i  className='pi pi-info-circle'></i>  <small className='text-muted' style={{color:'#333'}}>درخواست مرجوع کردن کالا در گروه لوازم جانبی صوتی و تصویری خودرو با دلیل انصراف از خرید تنها در صورتی قابل تایید است که کالا در شرایط اولیه باشد (در صورت پلمپ بودن، کالا نباید باز شده باشد).
 </small>
         </div>
       

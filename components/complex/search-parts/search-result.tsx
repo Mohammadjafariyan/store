@@ -28,7 +28,7 @@ export default class SearchResult extends AbstractGetList<any,any> {
 
   {this.state.searchResultList && this.state.searchResultList.map((item:any)=>{
 
-return ( <SearchResultItem item={item}/> );
+return ( <SearchResultItem key={item.src} item={item}/> );
   })}
 
 </div>

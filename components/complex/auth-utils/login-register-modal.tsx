@@ -40,7 +40,7 @@ export default function LoginRegisterModal() {
 
                                 
                                 <br />
-                                <small className="text-caption color-700 mt-4">ورود شما به معنای پذیرش<a className="mx-1 d-inline-block color-secondary-700" href="/page/terms/">شرایط طلا کالا</a>و<a className="mx-1 d-inline-block color-secondary-700" href="/page/privacy/">قوانین حریم‌خصوصی</a>است</small>
+                                <small className="text-caption color-700 mt-4">ورود شما به معنای پذیرش<a className="mx-1 d-inline-block color-secondary-700" >شرایط طلا کالا</a>و<a className="mx-1 d-inline-block color-secondary-700" >قوانین حریم‌خصوصی</a>است</small>
 
                                 <hr />
                                 <div className="text-center mb-3">
