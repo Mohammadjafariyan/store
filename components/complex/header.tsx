@@ -63,7 +63,7 @@ export default class Header extends React.Component {
                     </li>
                     <li className="nav-item">
                     </li>
-                    <span className='text-muted' style={{ fontSize: '33px !important', color: 'rgb(33 37 41 / 28%)!important' }}>| </span>
+                    <span className='text-muted' style={{ fontSize: '33px', color: 'rgb(33 37 41 / 28%)' }}>| </span>
                     <li className="nav-item">
                       <HeaderBasket />
 

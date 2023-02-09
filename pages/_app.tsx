@@ -1,10 +1,11 @@
 import '@/styles/globals.css'
 import '@/styles/assets/bootstrap.css'
 import '@/styles/assets/mega-menu.css'
+import '@/styles/theme.css'
 import '@/styles/assets/sample.css'
 import type { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core';
-import 'primereact/resources/themes/saga-blue/theme.css';
+/* import 'primereact/resources/themes/saga-blue/theme.css'; */
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 //import 'primeflex/primeflex.css';

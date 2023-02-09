@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { GlobalConstants } from '../abstract/global';
 
 export default function NavigationBar() {
     const items = [{ label: 'فروشگاه اینترنتی دیجی‌کالا' }, { label: 'مد و پوشاک' }, { label: 'زنانه' }, { label: 'اکسسوری زنانه' }, { label: 'زیورآلات زنانه' }];
@@ -11,7 +12,7 @@ export default function NavigationBar() {
 {items && items.map((val,i,arr)=>{
 
 
-return <><small className='on-hover-red text-muted' style={{marginRight:'4px',marginLeft:'4px'}}>   <a className='font-slim text-muted' href='#'>{val.label} </a> 
+return <><small className='on-hover-red text-muted' style={{marginRight:'4px',marginLeft:'4px'}}>   <a style={{color:GlobalConstants.SECENDARY_CSS}} className='font-slim ' href='#'>{val.label} </a> 
 
 {i!=arr.length -1 && <span  style={{marginRight:'6px',marginLeft:'6px'}}>/</span>}
 

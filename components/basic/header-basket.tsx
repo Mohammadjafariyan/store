@@ -5,10 +5,10 @@ export const HeaderBasket = (props:any) => {
     return (
         <>
 
-            <div className="nav-link ">
+            <div className="nav-link " >
 
 
-                <Button className="non-border" variant="default" color="gray" {...props} >
+                <Button    className="non-border" variant="default" color="gray" {...props} >
                     <i className='pi pi-shopping-cart shopping-cart'></i>
                 </Button>
 
