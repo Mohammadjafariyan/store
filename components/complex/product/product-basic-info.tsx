@@ -1,6 +1,7 @@
 import { Badge, Group, Rating } from '@mantine/core'
 import React from 'react'
 import ProductSendCard from './product-send-card'
+import ProductSummaryProperties from './product-summary-properties'
 
 export default function ProductBasicInfo() {
   return (
@@ -23,10 +24,6 @@ export default function ProductBasicInfo() {
    <br/>
    
        <div className='row'>
-        <div className='col-md-1'>
-        
-
-        </div>
         <div className='col-md-11'>
         <i  className='pi pi-info-circle'></i>  <small className='text-muted' style={{color:'#333'}}>درخواست مرجوع کردن کالا در گروه لوازم جانبی صوتی و تصویری خودرو با دلیل انصراف از خرید تنها در صورتی قابل تایید است که کالا در شرایط اولیه باشد (در صورت پلمپ بودن، کالا نباید باز شده باشد).
 </small>
@@ -35,8 +32,16 @@ export default function ProductBasicInfo() {
         </div>
 
 <br/>
+<div className='row'>
+
+<ProductSummaryProperties/>
+</div>
+
+<br/>
 
 <ProductSendCard/>
+
+<br/>
        
     </div>
   )
