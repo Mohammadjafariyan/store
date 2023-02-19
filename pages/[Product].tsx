@@ -1,3 +1,4 @@
+import { FooterLinks } from '@/components/complex/footer'
 import Header from '@/components/complex/header'
 import NavigationBar from '@/components/complex/navigation-bar'
 import ProductSingle from '@/components/complex/product/product-single'
@@ -30,6 +31,11 @@ export default class Product extends Component {
 <ProductSingle/>
 
         </div>
+
+
+        <br />
+
+<FooterLinks />
 
       </div>
     )

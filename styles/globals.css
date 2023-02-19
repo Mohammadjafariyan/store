@@ -1,4 +1,13 @@
 
+.social-link i{
+
+  font-size: 30px;
+}
+
+.product-article-header{
+  border-bottom: #ef4056 2px solid;
+  width: fit-content;
+}
 .comments-sort .p-tabmenu-nav.p-reset{
   border: none;
 }

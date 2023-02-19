@@ -10,10 +10,10 @@ export default class ProductComments extends Component {
       <div data-testid='ProductComments'>
 
 
+<h4 className='product-article-header'>امتیاز و دیدگاه کاربران</h4>
 
 <div className='row mt-4'>
 
-    <h4>امتیاز و دیدگاه کاربران</h4>
 
     <div className='col-md-3'>
   

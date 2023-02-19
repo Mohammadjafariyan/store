@@ -18,6 +18,8 @@ export default function ProductCommentsPartLine() {
 '',
 ];
     const items = [
+        {label: 'معرفی' },
+        {label: 'بررسی تخصصی' },
         {label: 'مشخصات' },
         {label: 'دیدگاه ها'},
         {label: 'پرسش ها'}
