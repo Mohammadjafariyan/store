@@ -4,13 +4,13 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Search from '@/pages/Search';
-import Product from '@/pages/[Product]';
+import ProductPage from '@/pages/productPage';
 
 
 describe('Home', () => {
   it('pages:Product', () => {
 
-     render(<Product />);
+     render(<ProductPage />);
 
 
     expect(screen.getByText('Product')).toBeInTheDocument();

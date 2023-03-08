@@ -6,6 +6,7 @@ import { Button } from 'primereact/button';
 import ApiGetMostSelledImp from '@/api-clients/use-case-api/api-get-most-selled';
 import API_FACTORY, { ApiConsts } from '@/api-clients/abstract/api-factory';
 import SkeletonLazyImage from '../basic/skeleton-lazy-image';
+import { Product } from '@/pages/api/swagger-generated-api classes';
 
 /* 
 type MyProps = {  };
@@ -38,18 +39,23 @@ export default class MostSelled extends AbstractGetList<any,any> {
         ];
 
 
-        const productTemplate = (product: any) => {
+        const productTemplate = (product: Product) => {
+
+            let item: Product = product;
+            let src: string = item.producImages != null && item.producImages.length > 0 ? item.producImages[0].path : '';
+
+
             return (
                 <div className="product-item" >
                     <div className="product-item-content">
                         <div className="mb-3">
                             <SkeletonLazyImage 
                              width={150} height={150}
-                            src={`${product.src}`} onError={(e:any) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={product.alt} className="product-image small-resp-image image-responsive" />
+                            src={`${src}`} onError={(e:any) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={product.name} className="product-image small-resp-image image-responsive" />
                         </div>
                         <div>
-                            <span className={`product-badge `}>{product.title}</span>
-                            <span className={`product-badge status-${product.inventoryStatus?.toLowerCase()}`}>{product.inventoryStatus}</span>
+                            <span className={`product-badge `}>{product.name}</span>
+                            {/* <span className={`product-badge status-${product.?.toLowerCase()}`}>{product.inventoryStatus}</span> */}
                             <div className="car-buttons mt-5">
                             {/*     <Button icon="pi pi-search" className="p-button p-button-rounded mr-2" />
                                 <Button icon="pi pi-star-fill" className="p-button-success p-button-rounded mr-2" />

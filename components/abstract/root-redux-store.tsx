@@ -1,10 +1,15 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
+import {productSingleSlice} from "@/components/slices/product-single-slices";
+import {productListSlice} from "@/components/slices/product-list-slices";
 
 const makeStore = () =>
   configureStore({
     reducer: {
-      //[authSlice.name]: authSlice.reducer,
+      [productSingleSlice.name]: productSingleSlice.reducer,
+      [productListSlice.name]: productListSlice.reducer,
+
+      
     },
     devTools: true,
   });

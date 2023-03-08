@@ -70,11 +70,11 @@ componentDidMount(): void {
             <br />
 
             <div className='container'>
-              <MostViewed />
+              {/*<MostViewed />*/}
             </div>
             <br />
             <div className='container'>
-              <MostSelled />
+              {/*<MostSelled />*/}
             </div>
 
 

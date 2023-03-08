@@ -7,9 +7,7 @@ import { InfoBadgesProduct } from "./info-badges-product";
 export function FooterLinks() {
 
 
-
   return (
-
 
     <div className="container-fluid foot">
       <footer className="container ">

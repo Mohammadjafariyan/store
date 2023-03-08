@@ -13,14 +13,18 @@ import ProductLinkParts from './product-link-parts'
 import ProductProperties from './product-properties'
 import ProductQuestions from './product-questions'
 import ProductSellerInfo from './product-seller-info'
+import {useSelector} from "react-redux";
+import {selectProductState} from "@/components/slices/product-single-slices";
 
 export default function ProductSingle() {
+
+   
   return (
     <div className='row mt-5' data-testid="ProductSingle">
 
       <div className='col-md-5'>
         <div className='row'>
-          <div className='col-md-2'><ProductLinkParts /></div>
+          <div className='col-md-2'>{/*<ProductLinkParts />*/}</div>
           <div className='col-md-10'>
             <ProductImageGallery />
 
@@ -48,7 +52,7 @@ export default function ProductSingle() {
       <div className='row'>
 
         <div style={{ height: '350px', overflow: 'hidden' ,border:'none !important' }} >
-          <SimilarProducts />
+          {/*<SimilarProducts />*/}
         </div>
       </div>
 
